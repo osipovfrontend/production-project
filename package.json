@@ -20,8 +20,14 @@
   "homepage": "https://github.com/atizay/production-project#readme",
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
     "@types/webpack": "^5.28.0",
+    "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
     "ts-loader": "^9.3.1",
     "ts-node": "^10.8.1",
     "ts-node-dev": "^1.1.8",
@@ -31,6 +37,8 @@
   },
   "dependencies": {
     "@types/webpack-dev-server": "^4.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "webpack-dev-server": "^4.7.4"
   }
 }
