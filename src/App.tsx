@@ -6,11 +6,12 @@ import { MainPageAsync } from './pages/MainPage/MainPage.async';
 import { Suspense, useContext, useState } from 'react';
 import { Theme, ThemeContext } from './theme/ThemeContext';
 import { useTheme } from './styles/themes/useTheme';
+import { classNames } from './helpers/classNames/classNames';
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme();    
+    const {theme, toggleTheme} = useTheme();
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
             <button onClick={toggleTheme}>TOGGLE</button>
             <Link to={'/'}>Главная</Link>
             <Link to={'/about'}>О сайте</Link>
