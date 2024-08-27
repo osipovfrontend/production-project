@@ -19,6 +19,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
         }),
+        // на случай, если React компоненты не будут обновляться на лету
         new ReactRefreshPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ]
