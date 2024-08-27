@@ -4,6 +4,8 @@ import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Sidebar } from "widgets/Sidebar";
+import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const { theme } = useTheme();
@@ -11,11 +13,15 @@ const App = () => {
     <div
       className={classNames("app", { hovered: true, selected: false }, [theme])}
     >
-      <Navbar />
-      <div className="content-page">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
+      
     </div>
   );
 };
