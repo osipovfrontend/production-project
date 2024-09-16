@@ -1,5 +1,5 @@
-import { ThemeSwitcher } from "./ui/LangSwitcher";
+import { LangSwitcher } from './ui/LangSwitcher';
 
 export {
-  ThemeSwitcher
-}
+  LangSwitcher,
+};
