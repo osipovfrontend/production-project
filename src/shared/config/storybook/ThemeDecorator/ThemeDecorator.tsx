@@ -1,6 +1,7 @@
 import React from 'react';
 import { StoryFn } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
+
 import 'app/styles/index.scss';
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
