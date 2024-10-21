@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-
-import { Button, ThemeButton } from './Button';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Button, ThemeButton } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Button> = {
@@ -28,44 +27,44 @@ type Story = StoryObj<typeof Button>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-  args: {
-    children: 'Text',
-  },
+    args: {
+        children: 'Text',
+    },
 };
 
 Primary.decorators = [
     ThemeDecorator(Theme.LIGHT),
-]
+];
 
 export const Clear: Story = {
-  args: {
-    children: 'Text',
-    theme: ThemeButton.CLEAR,
-  },
+    args: {
+        children: 'Text',
+        theme: ThemeButton.CLEAR,
+    },
 };
 
 Clear.decorators = [
     ThemeDecorator(Theme.LIGHT),
-]
+];
 
 export const Outline: Story = {
     args: {
-      children: 'Text',
-      theme: ThemeButton.OUTLINE,
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
     },
-  };
+};
 
 Outline.decorators = [
     ThemeDecorator(Theme.LIGHT),
-]
+];
 
 export const OutlineDark: Story = {
     args: {
-      children: 'Text',
-      theme: ThemeButton.OUTLINE,
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
     },
-  };
+};
 
-  OutlineDark.decorators = [
+OutlineDark.decorators = [
     ThemeDecorator(Theme.DARK),
-]
+];
