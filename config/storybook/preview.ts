@@ -5,15 +5,15 @@ import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorat
 import { Theme } from '../../src/app/providers/ThemeProvider';
 
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
+    parameters: {
+        controls: {
+            matchers: {
+                color: /(background|color)$/i,
+                date: /Date$/i,
+            },
+        },
     },
-  },
-  decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator],
+    decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), RouterDecorator],
 };
 
 export default preview;
