@@ -21,7 +21,7 @@ const meta: Meta<typeof Sidebar> = {
         // backgroundColor: { control: 'color' },
     },
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-    args: { onClick: fn() },
+    args: {},
 };
 
 export default meta;
@@ -29,17 +29,17 @@ type Story = StoryObj<typeof Sidebar>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Light: Story = {
-  args: {},
+    args: {},
 };
 
 Light.decorators = [
     ThemeDecorator(Theme.LIGHT),
-]
+];
 
 export const Dark: Story = {
     args: {},
-  };
-  
-  Dark.decorators = [
-      ThemeDecorator(Theme.DARK),
-  ]
+};
+
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+];
