@@ -1,8 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import React, {
+    ReactNode, useCallback, useEffect, useRef, useState,
+} from 'react';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 import { Portal } from '../Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 
 interface ModalProps {
     className?: string;
@@ -31,8 +33,8 @@ export const Modal = (props: ModalProps) => {
             setIsClosing(true);
             timerRef.current = setTimeout(() => {
                 onClose();
-                setIsClosing(false)
-            }, ANIMATION_DELAY)
+                setIsClosing(false);
+            }, ANIMATION_DELAY);
         }
     }, [onClose]);
 
@@ -49,13 +51,13 @@ export const Modal = (props: ModalProps) => {
 
     useEffect(() => {
         if (isOpen) {
-            window.addEventListener('keydown', onKeyDown)
+            window.addEventListener('keydown', onKeyDown);
         }
 
         return () => {
             clearTimeout(timerRef.current);
-            window.removeEventListener('keydown', onKeyDown)
-        }
+            window.removeEventListener('keydown', onKeyDown);
+        };
     }, [isOpen, onKeyDown]);
 
     const mods: Record<string, boolean> = {
@@ -69,7 +71,7 @@ export const Modal = (props: ModalProps) => {
             <div className={classNames(cls.Modal, mods, [className])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div
-                        className={classNames(cls.content, {[cls.contentOpened]: isOpen})}
+                        className={classNames(cls.content, { [cls.contentOpened]: isOpen })}
                         onClick={onContentClick}
                     >
                         {children}

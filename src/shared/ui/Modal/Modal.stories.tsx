@@ -30,7 +30,7 @@ export const Primary: Story = {
     args: {
         isOpen: true,
         // eslint-disable-next-line max-len
-        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima error ea aperiam veniam optio quia animi numquam repudiandae doloremque quod quis dignissimos, eos consequatur impedit omnis magni voluptate earum!',
+        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
 };
 
@@ -38,7 +38,7 @@ export const Dark: Story = {
     args: {
         isOpen: true,
         // eslint-disable-next-line max-len
-        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minima error ea aperiam veniam optio quia animi numquam repudiandae doloremque quod quis dignissimos, eos consequatur impedit omnis magni voluptate earum!',
+        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
     },
 };
 
