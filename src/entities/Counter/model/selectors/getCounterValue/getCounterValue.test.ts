@@ -1,11 +1,8 @@
+import { DeepPartial } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { getCounterValue } from './getCounterValue';
 
-type DeepPartial<T> = {
-    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
-
-describe('getCounterValue', () => {
+describe('getCounterValue.test', () => {
     test('', () => {
         const state: DeepPartial<StateSchema> = {
             counter: { value: 10 },
