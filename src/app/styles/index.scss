@@ -3,7 +3,8 @@
 @import "themes/normal";
 @import "themes/dark";
 
-body {
+.app,
+.app_modal {
     font: var(--font-m);
     color: var(--primary-color);
 }
@@ -20,8 +21,4 @@ body {
 .page-wrapper {
     flex-grow: 1;
     padding: 20px;
-}
-
-#storybook-root {
-    width: 100%;
 }
