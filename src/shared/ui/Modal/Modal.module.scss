@@ -4,9 +4,9 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
     opacity: 0;
     pointer-events: none;
+    z-index: -1;
     color: var(--primary-color);
 }
 
@@ -21,8 +21,8 @@
 
 .content {
     padding: 20px;
-    border-radius: 10px;
-    background-color: var(--bg-color);
+    border-radius: 12px;
+    background: var(--bg-color);
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;

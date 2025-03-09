@@ -1,47 +1,28 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Modal } from 'shared/ui/Modal/Modal';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Modal } from './Modal';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta: Meta<typeof Modal> = {
+export default {
     title: 'shared/Modal',
     component: Modal,
-    parameters: {
-        // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-        layout: 'centered',
-    },
-    // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-    tags: ['autodocs'],
-    // More on argTypes: https://storybook.js.org/docs/api/argtypes
     argTypes: {
-        // backgroundColor: { control: 'color' },
+        backgroundColor: { control: 'color' },
     },
-    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-    args: { },
+} as ComponentMeta<typeof Modal>;
+
+const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+    isOpen: true,
+    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
 };
 
-export default meta;
-type Story = StoryObj<typeof Modal>;
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-    args: {
-        isOpen: true,
-        // eslint-disable-next-line max-len
-        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-    },
+export const Dark = Template.bind({});
+Dark.args = {
+    isOpen: true,
+    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.\n ',
 };
-
-export const Dark: Story = {
-    args: {
-        isOpen: true,
-        // eslint-disable-next-line max-len
-        children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-    },
-};
-
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
