@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Артур",
+    "lastName": "Осипов",
+    "age": 30,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Ufa",
+    "username": "admin",
+    "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Favatar_6858504&psig=AOvVaw01S-uuXfKV1NZS4QEEo9rJ&ust=1744981851148000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKixqI2S34wDFQAAAAAdAAAAABAI"
+  }
 }
