@@ -2,11 +2,11 @@ import { Country, Currency } from 'shared/const/common';
 
 export interface Profile {
     first: string;
-    lastName: string;
-    age: number;
-    currency: Currency;
+    lastname: string;
+    age: 22,
+    currency: Currency,
     country: Country;
-    city: string;
+    city: string,
     username: string;
     avatar: string;
 }
