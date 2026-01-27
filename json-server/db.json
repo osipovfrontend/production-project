@@ -26,13 +26,13 @@
     }
   ],
   "profile": {
-    "first": "Артур122",
-    "lastName": "Осипов3",
-    "age": 30,
-    "currency": "EUR",
-    "country": "Belarus",
-    "city": "Ufa",
-    "username": "admin",
+    "first": "Артур",
+    "lastName": "Осипов",
+    "age": 31,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Уфа",
+    "username": "kobrik",
     "avatar": "https://arturosipov.com/assets/photo.jpg"
   }
 }
