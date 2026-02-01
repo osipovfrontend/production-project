@@ -9,7 +9,7 @@ const data = {
     username: 'admin',
     age: 22,
     country: Country.Ukraine,
-    lastname: 'ulbi tv',
+    lastName: 'ulbi tv',
     first: 'asd',
     city: 'asf',
     currency: Currency.USD,
@@ -51,7 +51,7 @@ describe('updateProfileData.test', () => {
     test('validate error', async () => {
         const thunk = new TestAsyncThunk(updateProfileData, {
             profile: {
-                form: { ...data, lastname: '' },
+                form: { ...data, lastName: '' },
             },
         });
         const result = await thunk.callThunk();

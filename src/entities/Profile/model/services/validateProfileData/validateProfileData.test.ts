@@ -7,7 +7,7 @@ const data = {
     username: 'admin',
     age: 22,
     country: Country.Ukraine,
-    lastname: 'ulbi tv',
+    lastName: 'ulbi tv',
     first: 'asd',
     city: 'asf',
     currency: Currency.USD,
@@ -21,7 +21,7 @@ describe('validateProfileData.test', () => {
     });
 
     test('without first and last name', async () => {
-        const result = validateProfileData({ ...data, first: '', lastname: '' });
+        const result = validateProfileData({ ...data, first: '', lastName: '' });
 
         expect(result).toEqual([
             ValidateProfileError.INCORRECT_USER_DATA,
