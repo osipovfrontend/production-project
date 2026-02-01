@@ -1,4 +1,4 @@
-import { BuildOptions } from "../types/config";
+import { BuildOptions } from '../types/config';
 
 export function buildBabelLoader({ isDev }: BuildOptions) {
     return {
@@ -20,5 +20,5 @@ export function buildBabelLoader({ isDev }: BuildOptions) {
                 ].filter(Boolean),
             },
         },
-    }
+    };
 }

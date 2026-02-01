@@ -1,17 +1,16 @@
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { validateProfileData } from './validateProfileData';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from 'entities/Profile';
+import { validateProfileData } from './validateProfileData';
 
 const data = {
-    age: 31,
-    city: 'ufa',
-    country: Country.Russia,
-    currency: Currency.RUB,
-    first: 'Arthur',
-    lastName: 'Osipov',
     username: 'admin',
+    age: 22,
+    country: Country.Ukraine,
+    lastName: 'ulbi tv',
+    first: 'asd',
+    city: 'asf',
+    currency: Currency.USD,
 };
 
 describe('validateProfileData.test', () => {
@@ -25,7 +24,7 @@ describe('validateProfileData.test', () => {
         const result = validateProfileData({ ...data, first: '', lastName: '' });
 
         expect(result).toEqual([
-            ValidateProfileError.INCORRECT_USER_DATA
+            ValidateProfileError.INCORRECT_USER_DATA,
         ]);
     });
 
@@ -33,7 +32,7 @@ describe('validateProfileData.test', () => {
         const result = validateProfileData({ ...data, age: undefined });
 
         expect(result).toEqual([
-            ValidateProfileError.INCORRECT_AGE
+            ValidateProfileError.INCORRECT_AGE,
         ]);
     });
 
@@ -41,7 +40,7 @@ describe('validateProfileData.test', () => {
         const result = validateProfileData({ ...data, country: undefined });
 
         expect(result).toEqual([
-            ValidateProfileError.INCORRECT_COUNTRY
+            ValidateProfileError.INCORRECT_COUNTRY,
         ]);
     });
 
@@ -49,10 +48,9 @@ describe('validateProfileData.test', () => {
         const result = validateProfileData({});
 
         expect(result).toEqual([
-            ValidateProfileError.INCORRECT_COUNTRY,
-            ValidateProfileError.INCORRECT_AGE,
             ValidateProfileError.INCORRECT_USER_DATA,
-
+            ValidateProfileError.INCORRECT_AGE,
+            ValidateProfileError.INCORRECT_COUNTRY,
         ]);
     });
 });
