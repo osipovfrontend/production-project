@@ -15,6 +15,16 @@
   "Войти": "Login",
   "increment": "increment",
   "decrement": "decrement",
-  "Введите username": "Введите username",
-  "Введите пароль": "Введите пароль"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Logout",
+  "Укажите валюту": "Choose currency",
+  "Укажите страну": "Choose country",
+  "Профиль": "Profile",
+  "Статья не найдена": "Статья не найдена",
+  "Произошла ошибка при загрузке статьи": {
+    "": "Произошла ошибка при загрузке статьи."
+  }
 }

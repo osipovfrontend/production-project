@@ -1,15 +1,12 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Select } from './Select';
+import { Select } from 'shared/ui/Select/Select';
 
 export default {
     title: 'shared/Select',
     component: Select,
     argTypes: {
         backgroundColor: { control: 'color' },
-    },
-    args: {
-        to: '/',
     },
 } as ComponentMeta<typeof Select>;
 

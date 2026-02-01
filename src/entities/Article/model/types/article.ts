@@ -10,20 +10,20 @@ export interface ArticleBlockBase {
 }
 
 export interface ArticleCodeBlock extends ArticleBlockBase {
-    type: ArticleBlockType.CODE,
+    type: ArticleBlockType.CODE;
     code: string;
 }
 
 export interface ArticleImageBlock extends ArticleBlockBase {
-    type: ArticleBlockType.IMAGE,
+    type: ArticleBlockType.IMAGE;
     src: string;
     title: string;
 }
 
 export interface ArticleTextBlock extends ArticleBlockBase {
-    type: ArticleBlockType.TEXT,
-    title?: string;
+    type: ArticleBlockType.TEXT;
     paragraphs: string[];
+    title?: string;
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
@@ -31,7 +31,7 @@ export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlo
 export enum ArticleType {
     IT = 'IT',
     SCIENCE = 'SCIENCE',
-    ECONOMIC = 'ECONOMIC',
+    ECONOMICS = 'ECONOMICS'
 }
 
 export interface Article {

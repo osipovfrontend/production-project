@@ -6,13 +6,13 @@ import { getProfileData } from './getProfileData';
 describe('getProfileData.test', () => {
     test('should return error', () => {
         const data = {
-            age: 31,
-            city: 'ufa',
-            country: Country.Russia,
-            currency: Currency.RUB,
-            first: 'Arthur',
-            lastName: 'Osipov',
             username: 'admin',
+            age: 22,
+            country: Country.Ukraine,
+            lastname: 'ulbi tv',
+            first: 'asd',
+            city: 'asf',
+            currency: Currency.USD,
         };
         const state: DeepPartial<StateSchema> = {
             profile: {
